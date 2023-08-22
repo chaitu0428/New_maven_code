@@ -3,7 +3,7 @@
 pipeline{
     agent any
     stages{
-        stage('ContDownload_master'){
+        stage('ContDownload_Payments'){
             steps{
                 script{
                     devopps.newGit("maven")
@@ -11,12 +11,5 @@ pipeline{
             }
         }
         
-        stage('ContBuild_master'){
-            steps{
-                script{
-                    devopps.newBuild()
-                }
-            }
-        }
      }
   }
